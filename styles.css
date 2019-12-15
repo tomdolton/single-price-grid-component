@@ -18,11 +18,13 @@ body {
   font-size: 16px;
   color: white;
   font-family: 'Karla', sans-serif;
+  background: #dedede;
+
 }
 
 section {
-  padding: 35px 30px;
-  /* height: 50vh; */
+  padding: 30px;
+
 }
 
 p {
@@ -38,10 +40,19 @@ h1 {
   margin-bottom: 25px;
 }
 
+
+/* Container layout */
+.container {
+  max-width: 315px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* Join section */
 
 .join {
   color: #999;
+  background: white;
 }
 
 .join__title {
@@ -51,6 +62,7 @@ h1 {
 .join__subtitle {
   color: var(--yellow);
   margin-bottom: 20px;
+
 }
 
 /* Price section */
@@ -63,6 +75,8 @@ h1 {
   color: var(--white-gray);
   font-weight: 400;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
   
 }
 
@@ -74,7 +88,9 @@ h1 {
 
 .price__text {
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 25px;
+  /* margin: 0 auto 25px; */
+  margin-bottom: 35px;
+  
 }
 
 button {
@@ -85,7 +101,14 @@ button {
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 315px;
+  /* margin: 0 auto; */
+  display: block;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -117,4 +140,39 @@ button {
 .attribution a {
   color: var(--cyan-dark);
   text-decoration: underline wavy;
+}
+
+
+/* Desktop View */
+
+@media (min-width: 700px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    /* max-height: 600px; */
+    margin: 50px auto;
+  }
+
+  section {
+    padding: 50px;
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+
+  .join {
+    grid-column: 1 / -1;
+  }
+
+
+
+  /* .attribution {
+    margin-top: 100px;
+  } */
+
 }
