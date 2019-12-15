@@ -1,0 +1,49 @@
+:root {
+  --cyan-dark: #2bb3b2;
+  --cyan-light: #4abebc;
+  --yellow: hsl(71, 73%, 54%);
+  --gray-light: hsl(204, 43%, 93%);
+  --gray-blue: hsl(218, 22%, 67%);
+
+}
+
+/* Base styles */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  color: white;
+  font-family: 'Karla', sans-serif;
+}
+
+
+.join {
+  color: #333;
+}
+
+/* Price section */
+
+.price {
+  background: var(--cyan-dark);
+}
+
+
+/* Why section */
+.why {
+  background: var(--cyan-light);
+}
+
+
+/* Footer default styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
